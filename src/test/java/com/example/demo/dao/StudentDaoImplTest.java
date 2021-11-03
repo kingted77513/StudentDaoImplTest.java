@@ -1,6 +1,7 @@
 package com.example.demo.dao;
 
 import com.example.demo.model.Student;
+import java.util.Date;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -38,6 +39,7 @@ class StudentDaoImplTest {
         student.setName("Kevin");
         student.setScore(66.2);
         student.setGraduate(true);
+        student.setCreateDate(new Date());
 
         Integer studentId = studentDao.insert(student);
 

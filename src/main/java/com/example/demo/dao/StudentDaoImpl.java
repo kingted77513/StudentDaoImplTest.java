@@ -22,7 +22,7 @@ public class StudentDaoImpl implements StudentDao {
 
     @Override
     public Integer insert(Student student) {
-        String sql = "INSERT INTO student(name, score, graduate, create_date) VALUE (:name, :score, :graduate, :createDate)";
+        String sql = "INSERT INTO student(name, score, graduate, create_date) VALUES (:name, :score, :graduate, :createDate)";
 
         Map<String, Object> map = new HashMap<>();
         map.put("name", student.getName());
